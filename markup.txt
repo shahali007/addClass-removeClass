@@ -1,0 +1,20 @@
+--------------------------------------
+HTML
+======================================
+<div id="menu">
+	<ul>
+		<li class="active">Home</li>
+		<li>About</li>
+		<li>Services</li>
+	</ul>
+</div>
+
+
+--------------------------------------
+jQuery activation
+======================================
+<script>
+	$('#menu ul li').on('click', function(){
+		$(this).addClass('active').siblings().removeClass('active');
+	});
+</script>
