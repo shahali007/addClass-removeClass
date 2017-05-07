@@ -1,20 +1,27 @@
 --------------------------------------
 HTML
 ======================================
-<div id="menu">
-	<ul>
-		<li class="active">Home</li>
-		<li>About</li>
-		<li>Services</li>
-	</ul>
-</div>
+<body>
+    <header>
+	Hello world!
+    </header>
+</body>
 
 
 --------------------------------------
 jQuery activation
 ======================================
 <script>
-	$('#menu ul li').on('click', function(){
-		$(this).addClass('active').siblings().removeClass('active');
-	});
+     $(document).ready(function () {
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+            var objectSelect = $("body");
+            var objectPosition = objectSelect.offset().top;
+            if (scroll > objectPosition) {
+                $("header").addClass("change");
+            } else {
+                $("header").removeClass("change");
+            }
+        });
+    });
 </script>
